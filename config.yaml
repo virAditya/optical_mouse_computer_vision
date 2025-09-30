@@ -1,0 +1,31 @@
+camera:
+  source: 0  # 0 for webcam, or IP camera URL
+  width: 640
+  height: 480
+  fps: 30
+
+tracking:
+  method: "optical_flow"  # "optical_flow" or "color_tracking"
+  sensitivity: 1.0
+  smoothing_factor: 0.3
+
+optical_flow:
+  max_corners: 100
+  quality_level: 0.3
+  min_distance: 7
+  block_size: 7
+
+color_tracking:
+  lower_hsv: [35, 50, 50]
+  upper_hsv: [85, 255, 255]
+
+display:
+  show_camera: true
+  show_desktop: true
+  window_width: 800
+  window_height: 600
+  fps_display: true
+
+cursor:
+  movement_mode: "relative"  # "relative" or "absolute"
+  boundary_margin: 50
