@@ -1,13 +1,13 @@
 camera:
-  source: 0  # 0 for webcam, or IP camera URL
+  source: 1  # 0 for webcam, or IP camera URL
   width: 640
   height: 480
-  fps: 30
+  fps: 60
 
 tracking:
   method: "optical_flow"  # "optical_flow" or "color_tracking"
-  sensitivity: 1.0
-  smoothing_factor: 0.3
+  sensitivity: 4.0
+  smoothing_factor: 0.2
 
 optical_flow:
   max_corners: 100
@@ -29,3 +29,11 @@ display:
 cursor:
   movement_mode: "relative"  # "relative" or "absolute"
   boundary_margin: 50
+
+
+recording:
+  enabled: true  # Set to true to record video
+  output_file: "optical_mouse_demo_3.mp4"
+  show_tracking_canvas: true  # Black canvas with cursor trails
+  trail_length: 100  # Number of trail points to keep
+  fps: 20  # Recording FPS
